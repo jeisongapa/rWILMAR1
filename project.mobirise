@@ -1,0 +1,650 @@
+{
+  "settings": {
+    "currentPage": "index.html",
+    "theme": {
+      "name": "organicamp",
+      "title": "OrganicAMP",
+      "styling": {
+        "primaryColor": "#aad236",
+        "secondaryColor": "#DDD78D",
+        "successColor": "#AAD236",
+        "infoColor": "#5a88cd",
+        "warningColor": "#8b8b99",
+        "dangerColor": "#ff5050",
+        "mainFont": "Poppins",
+        "display1Font": "Poppins",
+        "display1Size": "2.75",
+        "display2Font": "Poppins",
+        "display2Size": "1.75",
+        "display5Font": "Caveat",
+        "display5Size": 1.5,
+        "display6Font": "Poppins",
+        "display6Size": "1.25",
+        "display7Font": "Poppins",
+        "display7Size": 0.875,
+        "display4Font": "Poppins",
+        "display4Size": 0.75,
+        "isRoundedButtons": false,
+        "isScrollToTopButton": false,
+        "arrowColor": "#91AC41"
+      },
+      "titlePreset": "Site About Us",
+      "nameSelectPreset": "Site About Us",
+      "presetSourceTheme": "organicamp",
+      "additionalSetColors": [
+        "#cf2020",
+        "#ff5050",
+        "#ff0000",
+        "#5a88cd",
+        "#2f1313"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "name": "rWILMAR1",
+    "versionFirst": "5.7.4",
+    "siteFonts": [
+      {
+        "css": "'Poppins', sans-serif",
+        "name": "Poppins",
+        "url": "https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      },
+      {
+        "css": "'Caveat', handwriting",
+        "name": "Caveat",
+        "url": "https://fonts.googleapis.com/css?family=Caveat:400,500,600,700"
+      }
+    ],
+    "imageResize": true,
+    "favicon": "@PROJECT_PATH@/assets/images/l-9-128x128.png",
+    "mbrsiteDomain": "cunlunaist",
+    "robotsSwitcher": true,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 5,
+    "versionPublish": "5.7.4",
+    "screenshot": "screenshot.png",
+    "site_lang": "es",
+    "canonical-url": false,
+    "robotsText": "User-agent: Mediapartners-Google\nDisallow: \n\nUser-agent: *\nDisallow: /search\nAllow: /\n",
+    "publishChangesOnly": false
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Amarres de Amor",
+        "meta_descr": "Descubre cómo mantener la llama viva en tu relación de pareja, ayudamos para que puedas regresar el amor perdido y puedas ser feliz.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "h1.mbr-section-title": {
+              "letter-spacing": "0.2em"
+            },
+            "& when (@showSubtitle), (@showText)": {
+              ".mbr-section-title": {
+                "padding-bottom": "1.5rem"
+              }
+            },
+            "& when (@showText)": {
+              ".mbr-section-subtitle": {
+                "padding-bottom": "1rem"
+              }
+            },
+            "& when (@showButtons)": {
+              ".title-wrap": {
+                "padding-bottom": "1.5rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-title": {
+              "color": "#ff0000"
+            }
+          },
+          "_name": "header1",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"header1 organicamp_header1\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"11\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"11\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n\n\t\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n\t\t<fieldset type=\"background\" name=\"bg\">\n\t\t\t<input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/i-26-1024x1024.png\" selected>\n\t\t\t<input type=\"color\" title=\"Background Color\" value=\"#767676\">\n\t\t</fieldset>\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n\t\t<input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"bg.type!='color' && overlay\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\n\t<div class=\"container align-left\">\n\t\t<div class=\"title-wrap\" mbr-if=\"showTitle || showSubtitle || showText\">\n\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-center mbr-bold mbr-black\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n\t\t\t\tAmarres de Amor</h1>\n\t\t\t<h2 class=\"mbr-section-subtitle align-center mbr-fonts-style \" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubtitle\">\n\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t</h2>\n\t\t\t<p class=\"mbr-fonts-style mbr-text align-center\" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">\n\t\t\t\tDescubre cómo mantener la llama viva en tu relación de pareja, ayudamos para que puedas regresar el amor perdido y puedas ser feliz.<br><br>Estas ayudas serán efectivas si hay un amor mutuo entre la pareja.<br><br></p>\n\t\t</div>\n\t\t<div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\"><a class=\"btn btn-lg btn-danger\" href=\"https://contacto.guru/Wil1\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"fa fa-whatsapp mbr-iconfont mbr-iconfont-btn\"></span>CONTACTAR</a> <a class=\"btn btn-lg btn-info\" href=\"tel:17866913632\" data-app-placeholder=\"Type Text\"><span class=\"mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn\"></span>LLAMAR</a></div>\n\t</div>\n</section>",
+          "_cid": "tzHzE7uVer",
+          "_anchor": "header1-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            "& when (@showIcons)": {
+              ".card-img": {
+                "display": "flex",
+                "width": "calc(2rem ~\"+ @{iconsSize}rem\")",
+                ".icon-wrap": {
+                  "height": "calc(2rem ~\"+ @{iconsSize}rem\")",
+                  "background-color": "@iconsBg",
+                  ".mbr-iconfont": {
+                    "font-size": "~\"@{iconsSize}rem\"",
+                    "color": "@iconsColor"
+                  }
+                }
+              }
+            },
+            ".list-item:hover": {
+              ".icon-wrap": {
+                "transform": "scale(1.1, 1.1)"
+              }
+            },
+            ".item-title": {
+              "color": "#ff5050"
+            },
+            ".item-text": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-title ": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "features11",
+          "_customHTML": "<section class=\"features11\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Item Title\" name=\"showItemTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Item Text\" name=\"showItemText\" checked>\n        <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"6\" step=\"1\" value=\"3\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1.6\" max=\"5\" step=\"0.2\" value=\"1.6\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#ffffff\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons BG Color\" name=\"iconsBg\" value=\"#ff5050\" condition=\"showIcons\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#ffffff\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Fresh Food\n                    </h4>\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-black mbr-bold align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title \">\n                        What do you know about healthy food?\n                    </h3>\n                    <p class=\"mbr-fonts-style general-text mbr-text main-text align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".main-text\">\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, illo! Odit quod nesciunt fugiat minima itaque nemo esse reiciendis possimus dolorem recusandae consequuntur ad hic, soluta, enim quasi, amet debitis.\n                    </p>\n                    <div mbr-list mbr-list-grow=\"itemsCount\" class=\"list-wrap d-flex mbr-justify-content-center  \">\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center mbr-align-items-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-heart fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper d-flex mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-2\">\n                                    15.000+\n                                </h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-6\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    más de quince mil clientes satisfechos.\n                                </p>\n                            </div>\n                        </div>\n\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center mbr-align-items-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-heart fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper d-flex mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-2\">\n                                    30+\n                                </h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-6\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    más de treinta años de experiencia.\n                                </p>\n                            </div>\n                        </div>\n\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center mbr-align-items-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-heart fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper d-flex mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-2\">\n                                    95%\n                                </h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-6\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    noventa y cinco porciento de trabajos exitosos.\n                                </p>\n                            </div>\n                        </div>\n\n                        \n\n                        \n\n                        \n                    </div>\n                </div>\n            </div>\n            \n        </div>\n    </div>\n</section>",
+          "_cid": "qXEWQDgQEo",
+          "_anchor": "features11-6r",
+          "_sourceTheme": "organicamp",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bg",
+            "& when (@bgFigures)": {
+              ".figure": {
+                "background-color": "@figureColor"
+              },
+              "& when (@figure = '1')": {
+                ".figure": {
+                  "width": "(@circleRadius * 1px)",
+                  "height": "(@circleRadius * 1px)",
+                  "border-radius": "50%",
+                  "position": "absolute",
+                  "top": "(@circlePosY * 1%)",
+                  "left": "(@circlePosX * 1%)"
+                },
+                "& when (@overflow)": {
+                  "overflow": "hidden"
+                }
+              },
+              "& when (@figure = '2')": {
+                ".figure": {
+                  "position": "absolute",
+                  "& when not (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  },
+                  "& when (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "bottom": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when not (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  }
+                }
+              },
+              "& when (@figure = '3')": {
+                ".figure": {
+                  "background": "linear-gradient(@rotateAngle * 1deg, @figureColor (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) 100%)",
+                  "position": "absolute",
+                  "left": "0",
+                  "top": "0",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".btn": {
+              "margin-left": "0"
+            },
+            "& when (@flexDirection)": {
+              ".main-row": {
+                "flex-direction": "row-reverse"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".img-col": {
+                "order": "10",
+                "margin-top": "2.5rem"
+              }
+            },
+            "@media (max-width: 576px)": {
+              ".btn": {
+                "margin-left": "0.8rem"
+              }
+            },
+            ".main-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ff5050"
+            },
+            ".mbr-section-title": {
+              "color": "#ff5050"
+            }
+          },
+          "_name": "features5",
+          "_customHTML": "<section class=\"features5\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <!-- Background -->\n        <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#000000\">\n        <input type=\"checkbox\" title=\"Show BG Figures\" name=\"bgFigures\" checked>\n\n        <!-- Select Figure -->\n        <select title=\"Select Figure:\" name=\"figure\" condition=\"bgFigures\">\n            <option value=\"1\">Circle</option>\n            <option value=\"2\" selected>Rectangle</option>\n            <option value=\"3\">Diagonal</option>\n        </select>\n        \n        <!-- Figure Circle -->\n        <input type=\"range\" inline title=\"Circle X\" name=\"circlePosX\" min=\"-100\" max=\"100\" step=\"5\" value=\"-40\" condition=\"figure==1 && bgFigures\">\n        <input type=\"range\" inline title=\"Circle Y\" name=\"circlePosY\" min=\"-100\" max=\"100\" step=\"5\" value=\"40\" condition=\"figure==1 && bgFigures\">\n        <input type=\"range\" inline title=\"Circle Radius\" name=\"circleRadius\" min=\"100\" max=\"1600\" step=\"50\" value=\"1200\" condition=\"figure==1 && bgFigures\">\n        <input type=\"checkbox\" title=\"Overflow Hidden\" name=\"overflow\" condition=\"figure==1 && bgFigures\" checked>\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Rectangle -->\n        <input type=\"checkbox\" title=\"Width/Height\" name=\"directRect\" condition=\"figure==2 && bgFigures\">\n        <input type=\"checkbox\" title=\"Invert\" name=\"invertRect\" condition=\"figure==2 && bgFigures\" checked>\n        <input type=\"range\" inline title=\"Size\" name=\"sizeRect\" min=\"0\" max=\"100\" step=\"5\" value=\"35\" condition=\"figure==2 && bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Diagonal -->\n        <input type=\"range\" inline title=\"Rotate Angle\" name=\"rotateAngle\" min=\"0\" max=\"360\" step=\"5\" value=\"45\" condition=\"figure==3 && bgFigures\">\n        <input type=\"range\" inline title=\"Size\" name=\"sizeDiagonal\" min=\"0\" max=\"100\" step=\"5\" value=\"50\" condition=\"figure==3 && bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#2f1313\" condition=\"bgFigures\">\n        \n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"figure\" mbr-if=\"bgFigures\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\" img-col mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                        <div class=\"image-block-border d-flex mbr-justify-content-center\">\n                            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/i-26-1024x1024.png\" layout=\"responsive\" width=\"521.812\" height=\"521.812\" alt=\"Mobirise\">\n                                <div placeholder>\n                                    <div class=\"mobirise-spinner\">\n                                        <em></em>\n                                        <em></em>\n                                        <em></em>\n                                    </div>\n                                </div>\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/i-26-1024x1024.png\" alt=\"Mobirise\" data-aspectratio=\"0.6666666666666666\">\n                            </amp-img>\n                        </div>\n                    </div>\n            <div class=\"text-block d-flex mbr-align-items-center mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Amarres</h4>\n                    <h3 class=\"mbr-section-title align-left mbr-fonts-style mbr-black mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                        Maestros Poderosos</h3>\n                    <p class=\"mbr-fonts-style general-text align-left mbr-text main-text\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".main-text, .mbr-section-btn\">Maestros, Brujos y Chamanes en todos los temas relacionados con el AMOR.\n<br>\n<br>Trabajamos con magia Roja y Blanca, para que Obtenga resultados CONFIABLES.</p>\n                    <div mbr-buttons class=\"mbr-section-btn\" mbr-theme-style=\"display-6\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-danger\" href=\"https://contacto.guru/Wil1\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"fa fa-whatsapp mbr-iconfont mbr-iconfont-btn\"></span>CONTACTAR</a></div> \n                </div>\n            </div>\n        </div>\n    </div> \n</section>",
+          "_cid": "qYed7gjiKF",
+          "_anchor": "features5-9h",
+          "_sourceTheme": "organicamp",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bg",
+            "& when (@bgFigures)": {
+              ".figure": {
+                "background-color": "@figureColor"
+              },
+              "& when (@figure = '1')": {
+                ".figure": {
+                  "width": "(@circleRadius * 1px)",
+                  "height": "(@circleRadius * 1px)",
+                  "border-radius": "50%",
+                  "position": "absolute",
+                  "top": "(@circlePosY * 1%)",
+                  "left": "(@circlePosX * 1%)"
+                },
+                "& when (@overflow)": {
+                  "overflow": "hidden"
+                }
+              },
+              "& when (@figure = '2')": {
+                ".figure": {
+                  "position": "absolute",
+                  "& when not (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  },
+                  "& when (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "bottom": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when not (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  }
+                }
+              },
+              "& when (@figure = '3')": {
+                ".figure": {
+                  "background": "linear-gradient(@rotateAngle * 1deg, @figureColor (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) 100%)",
+                  "position": "absolute",
+                  "left": "0",
+                  "top": "0",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".btn": {
+              "margin-left": "0"
+            },
+            "& when (@flexDirection)": {
+              ".main-row": {
+                "flex-direction": "row-reverse"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".img-col": {
+                "order": "10",
+                "margin-top": "2.5rem"
+              }
+            },
+            "@media (max-width: 576px)": {
+              ".btn": {
+                "margin-left": "0.8rem"
+              }
+            },
+            ".main-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ff5050"
+            },
+            ".mbr-section-title": {
+              "color": "#ff5050"
+            }
+          },
+          "_name": "features5",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"features5\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked=\"\">\n\n        <!-- Background -->\n        <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#2f1313\">\n        <input type=\"checkbox\" title=\"Show BG Figures\" name=\"bgFigures\" checked=\"\">\n\n        <!-- Select Figure -->\n        <select title=\"Select Figure:\" name=\"figure\" condition=\"bgFigures\">\n            <option value=\"1\">Circle</option>\n            <option value=\"2\" selected=\"\">Rectangle</option>\n            <option value=\"3\">Diagonal</option>\n        </select>\n        \n        <!-- Figure Circle -->\n        <input type=\"range\" inline=\"\" title=\"Circle X\" name=\"circlePosX\" min=\"-100\" max=\"100\" step=\"5\" value=\"-40\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Circle Y\" name=\"circlePosY\" min=\"-100\" max=\"100\" step=\"5\" value=\"40\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Circle Radius\" name=\"circleRadius\" min=\"100\" max=\"1600\" step=\"50\" value=\"1200\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"checkbox\" title=\"Overflow Hidden\" name=\"overflow\" condition=\"figure==1 &amp;&amp; bgFigures\" checked=\"\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Rectangle -->\n        <input type=\"checkbox\" title=\"Width/Height\" name=\"directRect\" condition=\"figure==2 &amp;&amp; bgFigures\">\n        <input type=\"checkbox\" title=\"Invert\" name=\"invertRect\" condition=\"figure==2 &amp;&amp; bgFigures\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Size\" name=\"sizeRect\" min=\"0\" max=\"100\" step=\"5\" value=\"35\" condition=\"figure==2 &amp;&amp; bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Diagonal -->\n        <input type=\"range\" inline=\"\" title=\"Rotate Angle\" name=\"rotateAngle\" min=\"0\" max=\"360\" step=\"5\" value=\"45\" condition=\"figure==3 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Size\" name=\"sizeDiagonal\" min=\"0\" max=\"100\" step=\"5\" value=\"50\" condition=\"figure==3 &amp;&amp; bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#2f1313\" condition=\"bgFigures\">\n        \n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"figure\" mbr-if=\"bgFigures\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\" img-col mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                        <div class=\"image-block-border d-flex mbr-justify-content-center\">\n                            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/eso-7.webp\" layout=\"responsive\" width=\"521.812\" height=\"521.812\" alt=\"Mobirise\">\n                                <div placeholder=\"\">\n                                    <div class=\"mobirise-spinner\">\n                                        <em></em>\n                                        <em></em>\n                                        <em></em>\n                                    </div>\n                                </div>\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/eso-7.webp\" alt=\"Mobirise\" data-aspectratio=\"1\">\n                            </amp-img>\n                        </div>\n                    </div>\n            <div class=\"text-block d-flex mbr-align-items-center mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Amarres</h4>\n                    <h3 class=\"mbr-section-title align-left mbr-fonts-style mbr-black mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"><div><span style=\"font-family: Poppins, sans-serif; font-size: 2.75rem; font-style: normal; font-weight: 600;\">Recupere el Amor de su Parejar</span><br></div></h3>\n                    <p class=\"mbr-fonts-style general-text align-left mbr-text main-text\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".main-text, .mbr-section-btn\">Recupere a su Pareja con un Amarre de Amor Poderoso, le ayudaremos a FORTALECER la relación con su ser amado.</p>\n                    <div mbr-buttons=\"\" class=\"mbr-section-btn\" mbr-theme-style=\"display-6\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-danger\" href=\"https://contacto.guru/Wil1\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"fa fa-whatsapp mbr-iconfont mbr-iconfont-btn\"></span>CONTACTAR</a></div> \n                </div>\n            </div>\n        </div>\n    </div> \n</section>",
+          "_anchor": "features5-1",
+          "_isUserblock": true,
+          "_cid": "tA2am9JzVN",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bg",
+            "& when (@bgFigures)": {
+              ".figure": {
+                "background-color": "@figureColor"
+              },
+              "& when (@figure = '1')": {
+                ".figure": {
+                  "width": "(@circleRadius * 1px)",
+                  "height": "(@circleRadius * 1px)",
+                  "border-radius": "50%",
+                  "position": "absolute",
+                  "top": "(@circlePosY * 1%)",
+                  "left": "(@circlePosX * 1%)"
+                },
+                "& when (@overflow)": {
+                  "overflow": "hidden"
+                }
+              },
+              "& when (@figure = '2')": {
+                ".figure": {
+                  "position": "absolute",
+                  "& when not (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  },
+                  "& when (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "bottom": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when not (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  }
+                }
+              },
+              "& when (@figure = '3')": {
+                ".figure": {
+                  "background": "linear-gradient(@rotateAngle * 1deg, @figureColor (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) 100%)",
+                  "position": "absolute",
+                  "left": "0",
+                  "top": "0",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".btn": {
+              "margin-left": "0"
+            },
+            "& when (@flexDirection)": {
+              ".main-row": {
+                "flex-direction": "row-reverse"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".img-col": {
+                "order": "10",
+                "margin-top": "2.5rem"
+              }
+            },
+            "@media (max-width: 576px)": {
+              ".btn": {
+                "margin-left": "0.8rem"
+              }
+            },
+            ".main-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ff5050"
+            },
+            ".mbr-section-title": {
+              "color": "#ff5050"
+            }
+          },
+          "_name": "features5",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"features5\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked=\"\">\n\n        <!-- Background -->\n        <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#000000\">\n        <input type=\"checkbox\" title=\"Show BG Figures\" name=\"bgFigures\" checked=\"\">\n\n        <!-- Select Figure -->\n        <select title=\"Select Figure:\" name=\"figure\" condition=\"bgFigures\">\n            <option value=\"1\">Circle</option>\n            <option value=\"2\" selected=\"\">Rectangle</option>\n            <option value=\"3\">Diagonal</option>\n        </select>\n        \n        <!-- Figure Circle -->\n        <input type=\"range\" inline=\"\" title=\"Circle X\" name=\"circlePosX\" min=\"-100\" max=\"100\" step=\"5\" value=\"-40\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Circle Y\" name=\"circlePosY\" min=\"-100\" max=\"100\" step=\"5\" value=\"40\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Circle Radius\" name=\"circleRadius\" min=\"100\" max=\"1600\" step=\"50\" value=\"1200\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"checkbox\" title=\"Overflow Hidden\" name=\"overflow\" condition=\"figure==1 &amp;&amp; bgFigures\" checked=\"\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Rectangle -->\n        <input type=\"checkbox\" title=\"Width/Height\" name=\"directRect\" condition=\"figure==2 &amp;&amp; bgFigures\">\n        <input type=\"checkbox\" title=\"Invert\" name=\"invertRect\" condition=\"figure==2 &amp;&amp; bgFigures\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Size\" name=\"sizeRect\" min=\"0\" max=\"100\" step=\"5\" value=\"35\" condition=\"figure==2 &amp;&amp; bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Diagonal -->\n        <input type=\"range\" inline=\"\" title=\"Rotate Angle\" name=\"rotateAngle\" min=\"0\" max=\"360\" step=\"5\" value=\"45\" condition=\"figure==3 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Size\" name=\"sizeDiagonal\" min=\"0\" max=\"100\" step=\"5\" value=\"50\" condition=\"figure==3 &amp;&amp; bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#2f1313\" condition=\"bgFigures\">\n        \n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"figure\" mbr-if=\"bgFigures\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\" img-col mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                        <div class=\"image-block-border d-flex mbr-justify-content-center\">\n                            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/eso-19.webp\" layout=\"responsive\" width=\"521.8125\" height=\"695.75\" alt=\"Mobirise\">\n                                <div placeholder=\"\">\n                                    <div class=\"mobirise-spinner\">\n                                        <em></em>\n                                        <em></em>\n                                        <em></em>\n                                    </div>\n                                </div>\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/eso-19.webp\" alt=\"Mobirise\" data-aspectratio=\"1\">\n                            </amp-img>\n                        </div>\n                    </div>\n            <div class=\"text-block d-flex mbr-align-items-center mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Amarres</h4>\n                    <h3 class=\"mbr-section-title align-left mbr-fonts-style mbr-black mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Separaciones</h3>\n                    <p class=\"mbr-fonts-style general-text align-left mbr-text main-text\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".main-text, .mbr-section-btn\">Si su ser Amado esta con otra persona haremos un PODEROSO hechizo para separarlos y que nunca mas vuelvan.\n<br>\n<br>Alejamos a toda tercera persona que se quiera interponer entre usted y su ser AMADO.</p>\n                    <div mbr-buttons=\"\" class=\"mbr-section-btn\" mbr-theme-style=\"display-6\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-danger\" href=\"https://contacto.guru/Wil1\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"fa fa-whatsapp mbr-iconfont mbr-iconfont-btn\"></span>CONTACTAR</a></div> \n                </div>\n            </div>\n        </div>\n    </div> \n</section>",
+          "_anchor": "features5-2",
+          "_isUserblock": true,
+          "_cid": "tA2b81ASo6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bg",
+            "& when (@bgFigures)": {
+              ".figure": {
+                "background-color": "@figureColor"
+              },
+              "& when (@figure = '1')": {
+                ".figure": {
+                  "width": "(@circleRadius * 1px)",
+                  "height": "(@circleRadius * 1px)",
+                  "border-radius": "50%",
+                  "position": "absolute",
+                  "top": "(@circlePosY * 1%)",
+                  "left": "(@circlePosX * 1%)"
+                },
+                "& when (@overflow)": {
+                  "overflow": "hidden"
+                }
+              },
+              "& when (@figure = '2')": {
+                ".figure": {
+                  "position": "absolute",
+                  "& when not (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  },
+                  "& when (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "bottom": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when not (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  }
+                }
+              },
+              "& when (@figure = '3')": {
+                ".figure": {
+                  "background": "linear-gradient(@rotateAngle * 1deg, @figureColor (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) 100%)",
+                  "position": "absolute",
+                  "left": "0",
+                  "top": "0",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".btn": {
+              "margin-left": "0"
+            },
+            "& when (@flexDirection)": {
+              ".main-row": {
+                "flex-direction": "row-reverse"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".img-col": {
+                "order": "10",
+                "margin-top": "2.5rem"
+              }
+            },
+            "@media (max-width: 576px)": {
+              ".btn": {
+                "margin-left": "0.8rem"
+              }
+            },
+            ".main-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ff5050"
+            },
+            ".mbr-section-title": {
+              "color": "#ff5050"
+            }
+          },
+          "_name": "features5",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"features5\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked=\"\">\n\n        <!-- Background -->\n        <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#2f1313\">\n        <input type=\"checkbox\" title=\"Show BG Figures\" name=\"bgFigures\" checked=\"\">\n\n        <!-- Select Figure -->\n        <select title=\"Select Figure:\" name=\"figure\" condition=\"bgFigures\">\n            <option value=\"1\">Circle</option>\n            <option value=\"2\" selected=\"\">Rectangle</option>\n            <option value=\"3\">Diagonal</option>\n        </select>\n        \n        <!-- Figure Circle -->\n        <input type=\"range\" inline=\"\" title=\"Circle X\" name=\"circlePosX\" min=\"-100\" max=\"100\" step=\"5\" value=\"-40\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Circle Y\" name=\"circlePosY\" min=\"-100\" max=\"100\" step=\"5\" value=\"40\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Circle Radius\" name=\"circleRadius\" min=\"100\" max=\"1600\" step=\"50\" value=\"1200\" condition=\"figure==1 &amp;&amp; bgFigures\">\n        <input type=\"checkbox\" title=\"Overflow Hidden\" name=\"overflow\" condition=\"figure==1 &amp;&amp; bgFigures\" checked=\"\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Rectangle -->\n        <input type=\"checkbox\" title=\"Width/Height\" name=\"directRect\" condition=\"figure==2 &amp;&amp; bgFigures\">\n        <input type=\"checkbox\" title=\"Invert\" name=\"invertRect\" condition=\"figure==2 &amp;&amp; bgFigures\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Size\" name=\"sizeRect\" min=\"0\" max=\"100\" step=\"5\" value=\"35\" condition=\"figure==2 &amp;&amp; bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Diagonal -->\n        <input type=\"range\" inline=\"\" title=\"Rotate Angle\" name=\"rotateAngle\" min=\"0\" max=\"360\" step=\"5\" value=\"45\" condition=\"figure==3 &amp;&amp; bgFigures\">\n        <input type=\"range\" inline=\"\" title=\"Size\" name=\"sizeDiagonal\" min=\"0\" max=\"100\" step=\"5\" value=\"50\" condition=\"figure==3 &amp;&amp; bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#2f1313\" condition=\"bgFigures\">\n        \n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"figure\" mbr-if=\"bgFigures\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\" img-col mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                        <div class=\"image-block-border d-flex mbr-justify-content-center\">\n                            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/eso-13.webp\" layout=\"responsive\" width=\"521.8060960334029\" height=\"520.719\" alt=\"Mobirise\">\n                                <div placeholder=\"\">\n                                    <div class=\"mobirise-spinner\">\n                                        <em></em>\n                                        <em></em>\n                                        <em></em>\n                                    </div>\n                                </div>\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/eso-13.webp\" alt=\"Mobirise\" data-aspectratio=\"1\">\n                            </amp-img>\n                        </div>\n                    </div>\n            <div class=\"text-block d-flex mbr-align-items-center mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Amarres</h4>\n                    <h3 class=\"mbr-section-title align-left mbr-fonts-style mbr-black mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                        Endulzamientos</h3>\n                    <p class=\"mbr-fonts-style general-text align-left mbr-text main-text\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".main-text, .mbr-section-btn\">Comunícate, te ofrecemos la ayuda que necesitas para recuperar el amor de la persona que amas y hacer que el amor en esa persona aumente por ti\n<br>\n<br><br></p>\n                    <div mbr-buttons=\"\" class=\"mbr-section-btn\" mbr-theme-style=\"display-6\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-danger\" href=\"https://contacto.guru/Wil1\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"fa fa-whatsapp mbr-iconfont mbr-iconfont-btn\"></span>CONTACTAR</a></div> \n                </div>\n            </div>\n        </div>\n    </div> \n</section>",
+          "_anchor": "features5-3",
+          "_isUserblock": true,
+          "_cid": "tA2b8skxdK",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            }
+          },
+          "_name": "footer1",
+          "_customHTML": "<section class=\"footer1\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        \n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-col-sm-12 align-center\">\n            <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-app-placeholder=\"Type Text\">\n                © Copyright 2025 Templo - All Rights Reserved\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "qXi9UNUhCS",
+          "_anchor": "footer1-s",
+          "_sourceTheme": "organicamp",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
