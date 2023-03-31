@@ -57,7 +57,7 @@
     ],
     "imageResize": true,
     "favicon": "@PROJECT_PATH@/assets/images/l-9-128x128.png",
-    "mbrsiteDomain": "chvrzmdr7k",
+    "mbrsiteDomain": "rixnzyl3cv",
     "robotsSwitcher": true,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
@@ -72,7 +72,7 @@
     "robotsText": "User-agent: Mediapartners-Google\nDisallow: \n\nUser-agent: *\nDisallow: /search\nAllow: /\n",
     "publishChangesOnly": true,
     "global_header_custom": "<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-KR52CJM');</script>\n<!-- End Google Tag Manager -->",
-    "global_footer_custom": "<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-KR52CJM\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->",
+    "global_footer_custom": "<!--Start of Tawk.to Script-->\n  <script type=\"text/javascript\">\n    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();\n    (function () {\n      var s1 = document.createElement(\"script\"), s0 = document.getElementsByTagName(\"script\")[0];\n      s1.async = true;\n      s1.src = 'https://embed.tawk.to/61785fdc86aee40a57387f2b/1fiv3ctkg';\n      s1.charset = 'UTF-8';\n      s1.setAttribute('crossorigin', '*');\n      s0.parentNode.insertBefore(s1, s0);\n    })();\n  </script>\n  <!--End of Tawk.to Script-->\n\n<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-KR52CJM\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->",
     "global_after_body": "<a href=\"https://contacto.guru/Wil1\" class=\"whatsapp position-fixed\"\n    target=\"_blank \" rel=\"noreferrer\">\n    <i class=\"fab fa-whatsapp whatsapp-icon\"></i> WhatsApp</a>\n"
   },
   "pages": {
